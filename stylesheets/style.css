@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  overflow: hidden;
+  font-size: 20px;
+  --blue: #03033c;
+  --darkBlue: #020127;
+}
+body {
+  overflow: hidden;
+  margin: 0;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+#cnvs {
+  background: var(--blue);
+  border: 1px solid black;
+}
+#gameArea {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--darkBlue);
+}
+#canvasArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#scoreHead {
+  font-size: 0.7rem;
+  color: white;
+  position: absolute;
+  top: 0.25rem;
+}
+#buttonsDiv {
+  position: absolute;
+  bottom: 5vh;
+  width: 100%;
+}
+#controlButtons {
+  position: absolute;
+  left: 5vw;
+  bottom: 2vh;
+}
+#shootingButtons {
+  position: absolute;
+  right: 8vw;
+  bottom: 15vh;
+}
+#shootingButtons > button {
+  font-size: 1rem;
+  border-radius: 50%;
+  background: radial-gradient(#bd5219, #b90000);
+  border: none;
+}
+#controlButtons > :not(button[data-direction="left"]) {
+  position: relative;
+  left: 2.3rem;
+}
+#controlButtons > button {
+  width: 2rem;
+  height: 1rem;
+}
+
+button[data-direction="left"] {
+  transform: rotate(-90deg);
+}
+button[data-direction="right"] {
+  transform: rotate(90deg);
+}
+button[data-direction="down"] {
+  transform: rotate(180deg);
+}
+
+
+/* #scoreHead > span:nth-child(1) {
+      position: absolute;
+      left: 10px;
+    }
+    #scoreHead > span:nth-child(2) {
+      position: absolute;
+      right: 10px;
+    }*/

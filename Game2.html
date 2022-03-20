@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale = 1, user-scalable = no">
+  <title> Galaxy Shooter </title>
+  <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="all" />
+</head>
+<body>
+  <div id="gameArea">
+    <div id="canvasArea">
+      <div id="scoreHead">
+        <span>Score: 0</span> <span>HI Score: 10890</span>
+      </div>
+      <canvas id="cnvs" width="480" height="320"></canvas>
+   
+      <div id="buttonsDiv">
+        <div id="controlButtons">
+          <button data-direction="up" ontouchstart="move(1, false)" ontouchend="move(1, true)">
+            <svg viewBox = "0 0 32 16">
+              <polygon points="16,2 8,16 24,16 "
+                />
+            </svg>
+          </button>
+          <br>
+          <br>
+
+          <button data-direction="left" ontouchstart="move(4, false)" ontouchend="move(4, true)">
+            <svg viewBox = "0 0 32 16">
+              <polygon points="16,2 8,16 24,16 "
+                />
+            </svg>
+          </button>
+          <button data-direction="right" ontouchstart="move(2, false)" ontouchend="move(2, true)">
+            <svg viewBox = "0 0 32 16">
+              <polygon points="16,2 8,16 24,16 "
+                />
+            </svg>
+          </button>
+          <br>
+          <br>
+          <button data-direction="down" ontouchstart="move(3, false)" ontouchend="move(3, true)">
+            <svg viewBox = "0 0 32 16">
+              <polygon points="16,2 8,16 24,16 "
+                />
+            </svg>
+          </button>
+        </div>
+        <div id="shootingButtons">
+          <button ontouchstart="shoot(false)" ontouchend="shoot(true)">Shoot
+          </button>
+          <button onclick="ultra()">Ultra
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="scripts/soundnui.js" type="text/javascript" charset="utf-8"></script>
+<script src="scripts/mechanics.js" type="text/javascript" charset="utf-8"></script>
+<script src="scripts/starter.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
