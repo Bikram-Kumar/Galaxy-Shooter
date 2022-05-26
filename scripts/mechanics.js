@@ -137,7 +137,6 @@ function detectCollisions() {
 ships.forEach(function (s) {
   if (h.x1 <= s.x2 && h.x2 >= s.x1 && h.y1 <= s.y2 && h.y2 >= s.y1) {
    // stopGame();
-    alert("Game Over!");
   }
 }
 );
